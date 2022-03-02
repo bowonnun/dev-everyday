@@ -1,0 +1,152 @@
+.f-detail-page_wrapper{
+    margin-left: 200px;
+    margin-right: 132px;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .btn_back{
+        width: fit-content;
+        top: 52px;
+        left: -130px;
+        margin-bottom: 30px;
+        padding-left: 0;
+    }
+}
+.f-detail-title{
+    font-family: "db_heaventmed-regular";
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.f-title_name{
+    word-break: break-word;
+    width: 80%;
+    font-size: 86px;
+    letter-spacing: 4.3px;
+    line-height: 1;
+}
+.f-detail-title .icon-close_wraper{
+    margin-top: 20px;
+    .icon-closer{
+        font-size: 24px;
+    }
+}
+.fd-card{
+    border-radius: 0;
+    border-bottom: none !important;
+    border: 1px solid rgba(0, 0, 0, 1);
+    &:last-child{
+        border-bottom: 1px solid rgba(0, 0, 0, 1) !important;
+    }
+}
+.collapsed{
+    background-color: #fff !important;
+    .fd-btn-link_inner{
+        color: #000 !important;
+    }
+}
+.fdbtn-link{
+    background-color: #000;
+    white-space: unset;
+    text-decoration: none;
+    .fd-btn-link_inner{
+        font-family:"db_heaventmed-regular";
+        color: #fff;
+        letter-spacing: 1.2px;
+        line-height: 30px;
+        padding: 20px 0;
+        font-size: 24px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    &:hover{
+        text-decoration: none;
+        background-color: #000 !important;
+        
+        .fd-btn-link_inner{
+            color: #fff !important;
+        }
+    }
+    &:focus{
+        text-decoration: none;
+        background-color: #000;
+    }
+}
+.fdcard-body{
+    font-family:"db_heaventmed-regular";
+    padding: 46px 0;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+@include moblie{
+    // moblie-width: 767px;
+    .fdcard-body{
+        width: 90%;
+        padding: 25px 0;
+    }
+    .f-detail-page_wrapper{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .f-title_name{
+        font-size: 36px;
+        letter-spacing: 1.8px;
+        line-height: 0.6;
+    }
+    .fdbtn-link .fd-btn-link_inner{
+        font-size: 18px;
+        line-height: 18px;
+        width: 90%;
+    }
+    .f-detail-title .icon-close_wraper{
+        .icon-closer{
+            font-size: 20px;
+        }
+    }
+    .fdcard-body{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .f-detail-title .icon-close_wraper {
+        margin-top: 0px;
+    }
+}
+@include tablet{
+    // tablet-width: 768px; - tablet-width-landscape: 992px;
+    .f-detail-page_wrapper{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .f-title_name{
+        font-size: 60px;
+    }
+    .fdbtn-link .fd-btn-link_inner{
+        font-size: 20px;
+    }
+    .fdcard-body{
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .f-detail-title .icon-close_wraper {
+        margin-top: 10px;
+    }
+}
+@include laptop{
+    // tablet-width-landscape: 992px; - laptop-width: 1024px;  
+    .f-detail-page_wrapper{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .f-detail-title .icon-close_wraper{
+        margin-top: 10px;
+    }
+
+}
+@include notebook{
+    // notebook-width: 1440px;
+    
+}

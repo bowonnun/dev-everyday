@@ -1,0 +1,390 @@
+/* line 49, ../sass/variable.scss */
+body {
+  font-family: "db_heaventmed", "db_fongnam_xbold" !important;
+}
+
+@font-face {
+  font-family: "db_heaventmed";
+  src: url("../fonts/DB_Heavent_Med.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "db_heaventmed-regular";
+  src: url("../fonts/db_helvethaica_x_bd_v3.2-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "db_fongnam_xbold";
+  src: url("../fonts/DB_FongNam_X.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HKGrotesk-Medium";
+  src: url("../fonts/HKGrotesk-Medium.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HKGrotesk-Bold";
+  src: url("../fonts/HKGrotesk-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "DTL-Albertina-T-Regular";
+  src: url("../fonts/DTL-Albertina-T-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "remagg-cz";
+  src: url("../fonts/remagg-cz.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?jfrz3h");
+  src: url("../fonts/icomoon.eot?jfrz3h#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?jfrz3h") format("truetype"), url("../fonts/icomoon.woff?jfrz3h") format("woff"), url("../fonts/icomoon.svg?jfrz3h#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/* line 122, ../sass/variable.scss */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 137, ../sass/variable.scss */
+.icon-arrow-left:before {
+  content: "\e91c";
+}
+
+/* line 140, ../sass/variable.scss */
+.icon-arrow-right:before {
+  content: "\e91d";
+}
+
+/* line 143, ../sass/variable.scss */
+.icon-arrow-left2:before {
+  content: "\e91e";
+}
+
+/* line 146, ../sass/variable.scss */
+.icon-arrow-right2:before {
+  content: "\e91f";
+}
+
+/* line 149, ../sass/variable.scss */
+.icon-gallery .path1:before {
+  content: "\e909";
+  color: black;
+}
+
+/* line 153, ../sass/variable.scss */
+.icon-gallery .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: #dcdedf;
+}
+
+/* line 158, ../sass/variable.scss */
+.icon-gallery .path3:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: black;
+}
+
+/* line 163, ../sass/variable.scss */
+.icon-gallery .path4:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: #dcdedf;
+}
+
+/* line 168, ../sass/variable.scss */
+.icon-gallery .path5:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: black;
+}
+
+/* line 173, ../sass/variable.scss */
+.icon-gallery .path6:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: #dcdedf;
+}
+
+/* line 178, ../sass/variable.scss */
+.icon-gallery .path7:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: black;
+}
+
+/* line 183, ../sass/variable.scss */
+.icon-gallery .path8:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: #dcdedf;
+}
+
+/* line 188, ../sass/variable.scss */
+.icon-gallery .path9:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: black;
+}
+
+/* line 193, ../sass/variable.scss */
+.icon-gallery-hover .path1:before {
+  content: "\e912";
+  color: #dcdedf;
+}
+
+/* line 197, ../sass/variable.scss */
+.icon-gallery-hover .path2:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: black;
+}
+
+/* line 202, ../sass/variable.scss */
+.icon-gallery-hover .path3:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: #dcdedf;
+}
+
+/* line 207, ../sass/variable.scss */
+.icon-gallery-hover .path4:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: black;
+}
+
+/* line 212, ../sass/variable.scss */
+.icon-gallery-hover .path5:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: #dcdedf;
+}
+
+/* line 217, ../sass/variable.scss */
+.icon-gallery-hover .path6:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: black;
+}
+
+/* line 222, ../sass/variable.scss */
+.icon-gallery-hover .path7:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: #dcdedf;
+}
+
+/* line 227, ../sass/variable.scss */
+.icon-gallery-hover .path8:before {
+  content: "\e919";
+  margin-left: -1em;
+  color: black;
+}
+
+/* line 232, ../sass/variable.scss */
+.icon-gallery-hover .path9:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: #dcdedf;
+}
+
+/* line 237, ../sass/variable.scss */
+.icon-arrow-right3:before {
+  content: "\e908";
+}
+
+/* line 240, ../sass/variable.scss */
+.icon-closer:before {
+  content: "\e900";
+}
+
+/* line 243, ../sass/variable.scss */
+.icon-moon:before {
+  content: "\e901";
+}
+
+/* line 246, ../sass/variable.scss */
+.icon-web-other:before {
+  content: "\e902";
+}
+
+/* line 249, ../sass/variable.scss */
+.icon-lang:before {
+  content: "\e903";
+}
+
+/* line 252, ../sass/variable.scss */
+.icon-arrow-left3:before {
+  content: "\e904";
+}
+
+/* line 255, ../sass/variable.scss */
+.icon-facebook:before {
+  content: "\e905";
+}
+
+/* line 258, ../sass/variable.scss */
+.icon-ig:before {
+  content: "\e906";
+}
+
+/* line 261, ../sass/variable.scss */
+.icon-search:before {
+  content: "\e907";
+}
+
+/* line 306, ../sass/variable.scss */
+html {
+  height: 100%;
+}
+
+/* line 310, ../sass/variable.scss */
+html,
+body {
+  width: 100%;
+}
+
+/* line 315, ../sass/variable.scss */
+body {
+  height: 100%;
+  font-size: 62.5%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  font-weight: 300;
+}
+
+/* line 322, ../sass/variable.scss */
+p {
+  font-size: 1.4em;
+  color: #5a5a5a;
+  margin: 0;
+  line-height: 1;
+}
+
+/* line 328, ../sass/variable.scss */
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* line 333, ../sass/variable.scss */
+.select-group {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  position: relative;
+  padding: 0 15px;
+}
+/* line 340, ../sass/variable.scss */
+.select-group:after {
+  position: absolute;
+  right: 45px;
+  top: 25%;
+  color: #fff;
+  content: "\f0dd";
+  font: normal normal normal 20px/1 FontAwesome;
+  font-size: 2.5em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 353, ../sass/variable.scss */
+select:focus > option:checked {
+  background: #000 !important;
+  color: #fff;
+}
+
+/* line 357, ../sass/variable.scss */
+option {
+  margin: 15px;
+}
+
+/* line 361, ../sass/variable.scss */
+a {
+  color: #77777a;
+}
+/* line 363, ../sass/variable.scss */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 369, ../sass/variable.scss */
+.bg-light-grey {
+  background-color: #ffffff;
+}
+
+/* line 373, ../sass/variable.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+}
+
+/* line 388, ../sass/variable.scss */
+.element::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* line 398, ../sass/variable.scss */
+.height-100 {
+  height: 100vh;
+}
+
+/* line 402, ../sass/variable.scss */
+.width-100 {
+  width: 100%;
+}
+
+/* line 406, ../sass/variable.scss */
+#containerContent {
+  min-height: calc(100vh - 125px);
+  position: relative;
+}
+
+/* line 410, ../sass/variable.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

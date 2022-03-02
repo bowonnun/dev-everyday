@@ -1,0 +1,54 @@
+query MyQuery {
+  order(orderId: 5326) {
+    date
+    orderId
+    currency
+    customerNote
+    datePaid
+    paymentMethod
+    billing {
+      address1
+      address2
+      city
+      country
+      email
+      firstName
+      lastName
+      phone
+      postcode
+      state
+    }
+    shipping {
+      address1
+      address2
+      city
+      country
+      email
+      firstName
+      lastName
+      phone
+      state
+      postcode
+    }
+    couponLines {
+      nodes {
+        discount
+        orderId
+      }
+    }
+    lineItems {
+      nodes {
+        variation {
+          name
+          sku
+          price
+        }
+        quantity
+        subtotal
+        total
+      }
+    }
+    subtotal
+    total
+  }
+}

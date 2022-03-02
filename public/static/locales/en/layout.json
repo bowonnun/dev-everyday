@@ -1,0 +1,76 @@
+{
+  "history-label": "HISTORY",
+  "philosophy-label": "PHILOSOPHY",
+  "locatorstore-label": "STORE LOCATOR",
+  "onlinestore-label": "ONLINE STORES",
+  "contactus-label": "CONTACT",
+
+  "officename-label": "KARMAKAMET HEAD OFFICE",
+  "officeaddress1-label": "1971 BUILDING Haakon Groups",
+  "officeaddress2-label": "257 Soi Charoenmitr, Khlong Tan Nuea, Wattana,",
+  "officeaddress3-label": "Bangkok 10110 Thailand",
+
+  "aboutus-label": "ABOUT US",
+  "online-label": "ONLINE STORES",
+  "faqs-label": "FAQ",
+  "tel-label":"Tel",
+  "fax-label":"Fax",
+  "officehours-label":"Office Hours",
+  "mon-label":"Mon",
+  "tue-label":"Tue",
+  "wed-label":"Wed",
+  "thu-label":"Thu",
+  "fri-label":"Fri",
+  "termsconditions-label": "TERMS & CONDITIONS",
+  "privacypolicy-label": "PRIVACY POLICY",
+
+  "faqsdes1-label": "To help answer any queries or questions you may have about our brand,",
+  "faqsdes2-label": "products or services and features we offer, we have compiled a comprehensive list of those",
+  "faqsdes3-label": "most frequently asked questions. We hope you will find the answer you require.If not, please",
+
+  "ctdes1-label": "Please provide the following information and our client service team will get back to you soon.",
+  "ctdes2-label": "For most frequently asked questions, please go to",
+
+  "brand-label": "BRAND",
+  "product-label": "PRODUCT",
+  "service-label": "SERVICE",
+  "website-label": "WEBSITE",
+  "member-label": "MEMBER",
+
+  "send-label":"SEND",
+  "back-label":"BACK",
+  "email-label":"E-Mail",
+  "subject-label":"Subject",
+  "note-label":"Note",
+
+  "date-label":"Date",
+  "categories-label":"Categories",
+  "shop-label":"SHOP",
+  "share-label":"SHARE",
+
+  "ourcompany-label": "Our Company",
+  "ourheritage-label": "Our Heritage",
+
+  "recommendedproducts-label": "Recommended Products",
+  "productinformation-label": "Product Information",
+  "instoreservice-label": " In-Store Service",
+  "eservice-label": "E-service",
+  "karmakametmembership-label": " Karmakamet membership",
+  "questionaboutourwebsite-label": "Question about our website.",
+
+  "othersite_kkaromatic-label": "Karmakamet originated from the migration of the Chinese in 1930 to the south of the Golden Peninsula. Along with the journey, the first generation of the family had brought with them the knowledge in Chinese medicine and traditional incense making method. From then on, the family had sold Chinese medicine and incense for living and became Karmakamet in 1971. In 2001, the first Karmakamet store was opened and has been expanded since. ",
+  "othersite_kkdiner-label": "Founded in 2013, Karmakamet Diner is tucked away in the back alley of bustling Sukhumvit. Surrounded by lush, green garden the restaurant resembles a Chinese medicine warehouse, fashioned after co-founder Natthorn Rakchana’s grandfather’s warehouse in Hainan, China. The ground level houses Karmakamet Aromatic Shop, the fully stocked bar and comfortable high table seating, while the outdoor are lined with dining tables as well as plush cushioned sofas. Up on the second level is a private function room that accommodates up to 30 guests. ",
+  "othersite_kkconveyance-label": "The menu of Karmakamet Conveyance does not bind itself to any national cuisine. Chef Jutamas “Som” Theantae creates recipes that embody memories of Asia without the limitations of borders. The flavors are deep and emotive without the need to overcrowd the plate or overpower the palate. It is its own story waiting to be told.",
+  "othersite_eve-label": " “I Love My Life” is the philosophy behind Everyday Karmakamet brand. It’s the statement we made very often in almost everything we do. In response to this, all our product lines are created to support this standpoint in expect that our products will help you appreciate your life. At Everyday Karmakamet, you will find simple and sincere products with positive thoughts aiming to deliver the positive energy to you and the people around you. We wish you to love your life as it is and pass the vibe to others and the society. ",
+  
+  "cannotfindq-label":"No related questions were found.",
+  "cannotfindd-label":"No related information found.",
+  "cannotfinds-label":"No store information found.",
+  "error-with-status":"This page could not be found.",
+
+  "store-label":"STORE",
+  "howtoorder-label":"HOW TO ORDER",
+  "howtochange-label":"RETURN & EXCHANGE",
+  "Q&A-label":"QUESTION & ANWSER"
+
+} 

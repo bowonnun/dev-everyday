@@ -1,0 +1,177 @@
+.Footer-Ecom {
+    padding: 0 20px;
+    background-color: #eaeaea;
+    font-family: "db_heaventlight";
+    .Footer-Ecom_wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        max-width: 1400px;
+        margin: 0 auto;
+        grid-gap: 10px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .Footer-col {
+        .card-header {
+            padding: 0;
+            background: unset;
+            border: unset;
+        }
+        .collapse {
+            display: block;
+        }
+    }
+    .contentItem {
+        margin-bottom: 30px;
+        p {
+            line-height: 1.4;
+            font-size: 20px;
+            color: #000;
+        }
+        .BandName {
+            font-family: "db_heaventmed";
+            color: #000;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .Footer-subject {
+        @include remove-btn;
+        margin-bottom: 55px;
+        pointer-events: none;
+        &.collapsed {
+            background-color: unset !important;
+        }
+        h2 {
+            color: #000;
+            font-family: "db_heaventmed";
+            font-size: 28px;
+            letter-spacing: 0.42px;
+        }
+    }
+    .FooterLink-item {
+        display: block;
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        p {
+            color: #000;
+            font-size: 20px;
+        }
+        &:hover{
+            p{
+                color: #800008;
+            }
+        }
+    }
+    .group_ip-sletter {
+        p {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #000;
+        }
+        .input_footer {
+            width: 100%;
+            font-size: 20px;
+            padding: 4px 10px;
+            margin: 30px 0;
+        }
+
+        .btn-subscribe {
+            display: block;
+            @include remove-btn;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            width: 140px;
+            height: 50px;
+            font-size: 20px;
+            letter-spacing: 1px;
+            &:hover{
+                background-color: #000;
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .Footer-Ecom .contentItem p {
+        font-size: 16px;
+    }
+    .Footer-Ecom .group_ip-sletter p {
+        font-size: 16px;
+    }
+    .Footer-Ecom .FooterLink-item p {
+        font-size: 16px;
+    }
+    .Footer-Ecom .Footer-subject h2 {
+        font-size: 24px;
+    }
+    .Footer-Ecom .group_ip-sletter .input_footer {
+        font-size: 16px;
+    }
+    .Footer-Ecom .group_ip-sletter .btn-subscribe {
+        width: 110px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .Footer-Ecom .Footer-Ecom_wrapper {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .Footer-Ecom .Footer-subject {
+        margin-bottom: 45px;
+    }
+    .Footer-Ecom .FooterLink-item {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 1023px) {
+    .Footer-Ecom .Footer-col .FooterConent {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .Footer-Ecom .Footer-Ecom_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 0px;
+        padding-bottom: 0;
+        grid-gap: 0;
+    }
+    .Footer-Ecom .Footer-col .collapse {
+        display: none;
+    }
+    .Footer-Ecom .Footer-col .collapse.show {
+        display: block;
+    }
+    .Footer-Ecom .Footer-col {
+        border-bottom: 1px solid #000;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .Footer-Ecom .Footer-subject {
+        margin-bottom: 0px;
+        width: 100%;
+    }
+    .Footer-Ecom {
+        padding: 0;
+    }
+    .Footer-Ecom .Footer-subject h2 {
+        font-size: 26px;
+        padding: 7px;
+    }
+    .Footer-Ecom .group_ip-sletter .input_footer {
+        max-width: 300px;
+    }
+    .Footer-Ecom .group_ip-sletter .btn-subscribe {
+        margin: 0 auto;
+    }
+    .Footer-Ecom .Footer-subject {
+        pointer-events: unset;
+    }
+}

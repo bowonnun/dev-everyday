@@ -1,0 +1,169 @@
+.store-sec{
+    padding-bottom: 80px;
+}
+.store-title{
+    padding-left: 4.7vw;
+    padding-top: 26px;
+    padding-bottom: 11px;
+    font-size: 60px;
+}
+.store-item{
+    outline: 1px solid #DCDEDF;
+    width: 29.33%;
+    &:hover{
+        .store-detail{
+            &:before{
+                opacity: 1;
+            }
+            &:after{
+                opacity: 1;
+            }
+        }
+        .store-name{
+            color:#FFFFFF;
+        }
+        .store-tags{
+            color:#C8B98F;
+        }
+        .store-optime ,.store-loc ,.store-tel{
+            color: #DCDEDF;
+        }
+    }
+}
+.store-img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    img{
+        opacity: 0;
+        max-width: 100%;
+    }
+}
+.store-detail{
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 3vw;
+    position: relative;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-image: url(/sass/images/store/store_hover.png);
+        z-index: -1;
+        opacity: 0;
+        @include animation-delay(0.3);
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.79);
+        z-index: -2;
+        opacity: 0;
+        @include animation-delay(0.3);
+    }
+    .store-name{
+        font-size: 30px;
+        font-family: "DTLAlbertinaST";
+        color: #000000;
+        @include animation-delay(0.3);
+    }
+    .store-tags{
+        font-size: 28px;
+        color:#800008;
+        @include animation-delay(0.3);
+    }
+    .store-optime ,.store-loc ,.store-tel{
+        font-size: 24px;
+        color: #262626;
+        line-height: 0.9;
+        @include animation-delay(0.3);
+    }
+}
+@include moblie{
+    // moblie-width: 767px;
+    .store-title{
+        padding-left: 5vw !important;
+    }
+    .store-item{
+        max-width: 90%;
+        width: 100%;
+    }
+
+    .store-detail{
+
+        .store-name{
+            font-size: 18px !important;
+    
+        }
+        .store-tags{
+            font-size: 24px;
+    
+        }
+        .store-optime ,.store-loc ,.store-tel{
+            font-size: 16px;
+        }
+    }
+
+}
+@include tablet{
+    // tablet-width: 768px; - tablet-width-landscape: 992px;
+    .store-title{
+        padding-left: 3vw;
+    }
+    .store-item{
+        max-width: 350px;
+    }
+    .store-detail{
+
+        .store-name{
+            font-size: 18px !important;
+    
+        }
+        .store-tags{
+            font-size: 20px;
+    
+        }
+        .store-optime ,.store-loc ,.store-tel{
+            font-size: 18px;
+        }
+    }
+    .store-title{
+        padding-left: 2.5vw !important;
+    }
+}
+@include laptop{
+    // tablet-width-landscape: 992px; - laptop-width: 1024px;  
+    .store-detail .store-name{
+        font-size: 16px !important;
+    }
+    .store-detail .store-tags{
+        font-size: 20px;
+    }
+    .store-optime ,.store-loc ,.store-tel{
+        font-size: 20px !important;
+    }
+    .store-title{
+        padding-left: 3.3vw !important;
+    }
+}
+@include notebook{
+    // notebook-width: 1440px;
+    .store-detail .store-name{
+        font-size: 24px;
+    }
+
+    .store-title{
+        padding-left: 4vw;
+    }
+}

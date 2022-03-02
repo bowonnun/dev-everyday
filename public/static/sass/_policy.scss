@@ -1,0 +1,131 @@
+.policy-page_wrapper {
+    margin-left: 10%;
+    margin-right: 66px;
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.pp-title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+
+    .pp-title_name {
+        font-weight: 700;
+        width: 100%;
+        font-size: 86px;
+        letter-spacing: 4.3px;
+        line-height: 0.7;
+        word-wrap: break-word;
+    }
+
+    .icon-close_wraper {
+        margin-top: 4px;
+    }
+
+    .icon-closer {
+        font-size: 28px;
+        font-weight: 700;
+        color: #000;
+        &:hover {
+            color: #800008;
+        }
+    }
+}
+
+.pp-sec {
+    padding-top: 30px;
+
+    .pp-sec_subject {
+        font-family: "db_heaventreguler";
+        color: #a5010c;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+        font-weight: 700;
+    }
+
+    .pp-sec_detailitem {  
+        font-family: "db_heaventlight";
+        color: #000;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+        line-height: 32px;
+        text-indent: 40px;
+    }
+
+    .non-indent {
+        text-indent: 0px !important;
+    }
+}
+
+@include moblie {
+    // moblie-width: 767px;
+    .policy-page_wrapper {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-bottom: 45px;
+        position: relative;
+    }
+
+    .pp-title {
+        padding-top: 25px;
+
+        .pp-title_name {
+            font-family: "db_heaventreguler";
+            font-size: 36px;
+            letter-spacing: 1.8px;
+            line-height: 28px;
+        }
+
+        .icon-closer {
+            margin-right: 9px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+        }
+    }
+
+    .pp-sec {
+        padding-top: 20px;
+
+        .pp-sec_subject {
+            color: #800008;
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            line-height: 18px;
+        }
+
+        .pp-sec_detailitem {
+            font-family: "db_heaventreguler";
+            color: #000;
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            line-height: 18px;
+            text-indent: unset;
+            padding-bottom: 20px;
+
+            &:last-child {
+                padding-bottom: unset;
+            }
+        }
+    }
+}
+
+@include tablet {
+    // tablet-width: 768px; - tablet-width-landscape: 992px;
+    .policy-page {
+        .pp-title .pp-title_name {
+            font-size: 55px;
+        }
+    }
+}
+
+@include laptop {
+    // tablet-width-landscape: 992px; - laptop-width: 1024px;
+}
+
+@include notebook {
+    // notebook-width: 1440px;
+}
+
+

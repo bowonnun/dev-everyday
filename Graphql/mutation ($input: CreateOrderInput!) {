@@ -1,0 +1,134 @@
+mutation ($input: CreateOrderInput!) {
+  createOrder(input: $input) {
+    clientMutationId
+    order {
+      id
+      refunds {
+        nodes {
+          amount
+        }
+      }
+      shipping {
+        address1
+        address2
+        city
+        company
+        country
+        email
+        firstName
+        lastName
+        phone
+        postcode
+        state
+      }
+      billing {
+        address1
+        address2
+        city
+        company
+        country
+        email
+      }
+      lineItems {
+        nodes {
+          product {
+            id
+            name
+            description
+            type
+            onSale
+            slug
+            image {
+              id
+              sourceUrl
+              altText
+            }
+          }
+          variation {
+            id
+            variationId
+            name
+            description
+            type
+            onSale
+            price
+            regularPrice
+            salePrice
+            image {
+              id
+              sourceUrl
+              altText
+            }
+            attributes {
+              nodes {
+                id
+                attributeId
+                name
+                value
+              }
+            }
+          }
+          quantity
+        }
+      }
+      couponLines {
+        nodes {
+          discount
+          code
+        }
+      }
+      customerNote
+      subtotal
+      discountTotal
+      total
+      date
+    }
+  }
+}
+{
+  "input": {
+    "clientMutationId": "myID",
+    "shipping": {
+      "firstName": "jeerawutsdfsdfs",
+      "lastName": "teweechanwatchai",
+      "address1": "102 hillsdfsdf",
+      "address2": "Stre",
+      "city": "Backkok",
+      "country": "TH",
+      "state": "NAHOELELE",
+      "postcode": "411208",
+      "email": "jeerawut.te@gmail.com",
+      "phone": "0989147429",
+      "overwrite": true
+    },
+    "billing": {
+      "firstName": "jeerawuts",
+      "lastName": "Sql",
+      "address1": "102 hill",
+      "address2": "Stre",
+      "city": "Backkok",
+      "country": "TH",
+      "state": "NAHOELELE",
+      "postcode": "411208",
+      "email": "jeerawut.te@gmail.com",
+      "phone": "0989147429"
+    },
+    "lineItems": [
+      {
+      "productId": 1805,
+       "variationId": 4559,
+        "quantity": 2
+      },
+      {
+      "productId": 1805,
+       "variationId": 4528,
+        "quantity": 2
+    	}
+    ],
+    "coupons": "YZ786YDV",
+    "customerNote" :"a;lsdkapsldk",
+    "paymentMethod": "omise",
+    "isPaid": true,
+    "transactionId": "2020155682"
+  }
+}

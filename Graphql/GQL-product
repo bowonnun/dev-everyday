@@ -1,0 +1,67 @@
+{
+  product(idType: SLUG, id: "traditional-asian-perfume-sachet-refills") {
+    id
+    productId
+    name
+    sku
+    slug
+    shortDescription
+    description
+    image {
+      id
+      sourceUrl
+      slug
+      title
+    }
+    galleryImages {
+      nodes {
+        sourceUrl
+        slug
+        id
+      }
+    }
+    purchaseNote
+    ... on VariableProduct {
+      name
+      id
+      price
+      variations(first: 99) {
+        nodes {
+          variationId
+          name
+          description
+          price(format: FORMATTED)
+          onSale
+          manageStock
+          regularPrice(format: FORMATTED)
+          salePrice(format: FORMATTED)
+          image {
+            sourceUrl
+            mediaItemUrl
+            mediaItemId
+            description
+            caption
+          }
+          stockQuantity
+        }
+      }
+    }
+    ... on SimpleProduct {
+      id
+      name
+      price
+      salePrice
+      regularPrice
+      productId
+    }
+    productCategories {
+      nodes {
+        name
+        slug
+      }
+    }
+  }
+  coupons {
+    nodes
+  }
+}

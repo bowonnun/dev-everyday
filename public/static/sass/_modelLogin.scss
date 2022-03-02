@@ -1,0 +1,159 @@
+.ModelLogin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+.ModelLoginOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+.ModelLogin_wrapper {
+    background-image: url("/static/images/img_ModelAccount/bg/Pic\ Mock-up\ –\ 1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 475px;
+    border-radius: 15px;
+
+    .inner {
+        background-color: #fff;
+        border-radius: inherit;
+        padding: 40px 35px;
+        box-shadow: 1px 6px 11px -5px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 1px 6px 11px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 6px 11px -5px rgba(0, 0, 0, 0.75);
+    }
+    .logoModel {
+        text-align: center;
+        margin: 0 auto 20px;
+        img {
+            max-width: 100%;
+        }
+    }
+    .group-ip {
+        .ip-item {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 30px;
+            }
+            label {
+                font-weight: 700;
+                font-size: 20px;
+                margin-bottom: 0;
+            }
+            input {
+                border-radius: 5px;
+                border: 1px solid #000;
+                width: 100%;
+                line-height: 1.25;
+                color: #495057;
+                font-size: 22px;
+                padding: 5px 10px;
+            }
+        }
+    }
+    .groupBtn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn-ForgetPass {
+            cursor: pointer;
+            outline: unset;
+            position: relative;
+            font-size: 20px;
+            line-height: 1;
+            color: #999;
+            background-color: unset;
+            border: none;
+            span {
+                text-decoration: underline;
+            }
+        }
+        .btn-Login {
+            cursor: pointer;
+            outline: unset;
+            border: unset;
+            width: 150px;
+            height: 50px;
+            display: grid;
+            place-content: center;
+            font-size: 26px;
+            background-color: #c72121;
+            border-radius: 10px;
+            box-shadow: 3px 3px 6px 0 rgb(85 85 85 / 20%);
+            letter-spacing: 1px;
+            span {
+                color: #fff;
+            }
+        }
+    }
+
+    .sec-btn {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        padding: 40px 35px;
+        a {
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            font-size: 26px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .btn-new-member {
+            background-color: #000;
+            color: #fff;
+            -webkit-appearance: none;
+            box-shadow: 3px 3px 6px hsl(0deg 0% 43% / 20%);
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-trans-member {
+            background-color: #fff;
+            color: #000;
+            outline: none;
+            box-shadow: 3px 3px 6px hsl(0deg 0% 43% / 20%);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .ModelLogin_wrapper {
+        width: 345px;
+    }
+    .ModelLogin_wrapper .logoModel {
+        width: 90px;
+    }
+    .ModelLogin_wrapper .groupBtn .btn-Login {
+        width: 120px;
+        height: 40px;
+        font-size: 22px;
+    }
+    .ModelLogin_wrapper .inner {
+        padding: 25px 25px;
+    }
+    .ModelLogin_wrapper .sec-btn {
+        grid-gap: 10px;
+        padding: 20px 25px;
+    }
+    .ModelLogin_wrapper .sec-btn a {
+        font-size: 22px;
+    }
+    .ModelLogin_wrapper .groupBtn .btn-ForgetPass {
+        font-size: 18px;
+    }
+}

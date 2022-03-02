@@ -1,0 +1,298 @@
+.footer-main {
+  position: relative;
+  z-index: 0 !important;
+}
+.container-footer {
+  border-top: 1px solid #000;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.wrap-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-gap: 10px;
+  // footer-item 1
+  .adress-box {
+    p {
+      color: #000;
+      line-height: 23px;
+    }
+    .band-name {
+      font-size: 20px;
+    }
+  }
+  // footer-item 2
+  .icon {
+    text-align: left;
+    line-height: 1.2;
+    a {
+      font-size: 24px;
+      color: #000;
+      margin-right: 30px;
+      &:nth-last-child(1) {
+        margin-right: 0px;
+      }
+      &:hover {
+        color: #800008;
+      }
+    }
+  }
+  // footer-item 3
+  .contact-box {
+    text-align: right;
+    p {
+      color: #000;
+      line-height: 1.3;
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  .CreditCard {
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+    grid-gap: 15px;
+    .title-CreditCard {
+      font-size: 20px;
+      color: #000;
+      min-width: fit-content;
+    }
+    .groupCreditCard {
+      display: flex;
+    }
+    .CreditCard-item {
+      display: inline-block;
+      width: 45px;
+      height: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .CreditCard-item.kerry {
+      width: 70px;
+      margin-left: 10px;
+    }
+  }
+  // footer-item 4
+  .grup-link {
+    font-size: 1.4em;
+    font-family: "HKGrotesk-Bold";
+    a {
+      color: #000;
+      margin-right: 35px;
+      &:nth-last-child(1) {
+        margin-right: 0px;
+      }
+      &:hover {
+        color: #800008;
+      }
+    }
+  }
+  // footer-item 5
+  .footer-copyright {
+    font-family: "HKGrotesk-Bold";
+    text-align: center;
+    p {
+      font-size: 1.2em;
+    }
+  }
+  // footer-item 6
+  .terms-con {
+    font-family: "HKGrotesk-Bold";
+    text-align: right;
+    font-size: 1.4em;
+    a {
+      color: #000;
+      margin-right: 35px;
+      &:nth-last-child(1) {
+        margin-right: 0px;
+      }
+      &:hover {
+        color: #800008;
+      }
+    }
+  }
+}
+// @include tablet {
+//   .wrap-footer {
+//     font-size: 8px;
+//   }
+// }
+// @include moblie {
+//   .wrap-footer {
+//     grid-template-columns: repeat(1, 1fr);
+//     grid-row-gap: 0px;
+//     .adress-box {
+//       grid-row: 1/2;
+//     }
+//     .contact-box {
+//       grid-row: 2/3;
+//       text-align: left;
+//       padding-top: 20px;
+//     }
+//     .grup-link {
+//       grid-row: 3/4;
+//       margin-top: 20px;
+//       text-align: center;
+//       border: 1px solid #000;
+//       a {
+//         padding: 15px 0 15px 0;
+//         line-height: 0.8;
+//         border-right: 1px solid #000;
+//         display: block;
+//         width: 33.33%;
+//         float: left;
+//         margin-right: 0px;
+//         @include animation-delay(0.3);
+//         &:last-child {
+//           border-right: unset;
+//         }
+//         &:hover {
+//           background-color: #000;
+//           color: #fff;
+//         }
+//       }
+//     }
+//     .terms-con {
+//       grid-row: 4/5;
+//       text-align: center;
+//       border: 1px solid #000;
+//       margin-top: -1px;
+//       a {
+//         padding: 15px 0;
+//         line-height: 0.8;
+//         display: block;
+//         width: 50%;
+//         float: left;
+//         margin-right: 0px;
+//         border-right: 1px solid #000;
+//         @include animation-delay(0.3);
+//         &:last-child {
+//           border-right: unset;
+//         }
+//         &:hover {
+//           background-color: #000;
+//           color: #fff;
+//         }
+//       }
+//     }
+//     .icon {
+//       grid-row: 5/6;
+//       padding-top: 20px;
+//       a {
+//         &:nth-last-child(1) {
+//           margin-right: 0px;
+//         }
+//       }
+//     }
+
+//     .footer-copyright {
+//       padding-top: 20px;
+//       grid-row: 6/7;
+//       margin-bottom: 0px;
+//     }
+//   }
+// }
+// --------------dark-mode--------
+// @media (max-width: 767px) {
+//   a[href^="tel:"] {
+//     position: relative;
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       bottom: 0;
+//       right: 0px;
+//       height: 1px;
+//       width: 100%;
+//       background-color: #000;
+//     }
+//   }
+//   .dark-mode {
+//     .wrap-footer .grup-link {
+//       border: 1px solid #fff;
+//     }
+//     .wrap-footer .terms-con {
+//       border: 1px solid #fff;
+//     }
+//     .wrap-footer .grup-link a {
+//       border-right: 1px solid #fff;
+//     }
+//     .wrap-footer .terms-con a {
+//       border-right: 1px solid #fff;
+//     }
+
+//     .wrap-footer .grup-link a:last-child {
+//       border-right: unset;
+//     }
+//     .wrap-footer .terms-con a:last-child {
+//       border-right: unset;
+//     }
+//     .wrap-footer .contact-box p a::before {
+//       background-color: #fff;
+//     }
+//   }
+// }
+
+@media (max-width: 1439px) {
+  .wrap-footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wrap-footer .CreditCard {
+    grid-column: 3;
+    justify-content: end;
+  }
+  .wrap-footer .CreditCard {
+    grid-column: 3/5;
+  }
+  .wrap-footer .icon {
+    text-align: center;
+  }
+}
+@media (max-width: 1200px) {
+  .container-footer {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .wrap-footer .adress-box .band-name {
+    font-size: 16px;
+  }
+  .wrap-footer .CreditCard .title-CreditCard {
+    font-size: 16px;
+  }
+  .wrap-footer .icon a {
+    font-size: 20px;
+  }
+}
+// @media (max-width: 1023px) {
+//   .container-footer {
+//     padding: 30px 20px;
+//   }
+// }
+@media (max-width: 1023px) {
+  .container-footer {
+    padding: 25px 15px;
+  }
+  .wrap-footer {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+  .wrap-footer .CreditCard {
+    grid-column: 1;
+    justify-content: center;
+  }
+  .wrap-footer .adress-box {
+    text-align: center;
+  }
+  .Footer-Ecom .group_ip-sletter .input_footer {
+    margin: 15px 0;
+  }
+}

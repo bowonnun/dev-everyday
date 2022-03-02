@@ -1,0 +1,136 @@
+.gallery-page{
+  padding-bottom: 20px;
+}
+.gallery-mesonry {
+  overflow: hidden;
+}
+.gal-item {
+  width: 25%;
+  padding: 50px 25px;
+  background: #fff;
+  border: 0.5px solid #DCDEDF;
+  overflow: hidden;
+  cursor: url("/sass/images/icon-logo/cursor_right.png") 15 15, auto;
+  a{
+    cursor: url("/sass/images/icon-logo/cursor_right.png") 15 15, auto;
+  }
+  
+  .gal-item-wrapper{
+    position: relative;
+    margin: 0;
+  }
+  &:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/sass/images/bg-hov/final_hording_wisdom.png);
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    @include animation-delay(0.3);
+  }
+  &:after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    @include animation-delay(0.3);
+  }
+}
+.gal-img{
+  max-width: 100%;
+}
+.gal-caption{
+  position: absolute;
+  bottom: 0;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  @include animation-delay(0.3);
+  .gal-title{
+    font-family: "DTLAlbertinaST";
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+  .gal-subtitle{
+    padding-top: 10px;
+    font-size: 22px;
+    color: #FFFFFF;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+// hover
+.gal-item{
+  &:hover{
+    .gal-caption{
+      opacity: 1;
+    }
+    &:before{
+      opacity: 1;
+    }
+    &:after{
+      opacity: 1;
+    }
+  }
+}
+
+@include moblie {
+  // moblie-width: 767px;
+  .gallery-page{
+    padding-top: 60px !important;
+  }
+  .gal-item {
+    width: 50%;
+    padding: 25px 10px !important;
+  }
+}
+@include tablet {
+  // tablet-width: 768px; - tablet-width-landscape: 992px;
+  .gallery-page{
+    padding-top: 60px !important;
+  }
+  .gal-item {
+    width: 33.33%;
+    padding: 30px 15px !important;
+  }
+}
+@include laptop {
+  // tablet-width-landscape: 992px; - laptop-width: 1024px;
+  .gallery-page{
+    padding-top: 60px !important;
+  }
+  .gal-item {
+    width: 25%;
+    padding: 30px 15px !important;
+  }
+}
+@include notebook {
+  // notebook-width: 1440px;
+  .gal-item{
+    padding: 40px 20px;
+  }
+  .gal-caption{
+    padding: 20px;
+    .gal-title{
+      font-size: 23px;
+    }
+    .gal-subtitle{
+      padding-top: 5px;
+      font-size: 18px;
+    }
+  }
+
+}

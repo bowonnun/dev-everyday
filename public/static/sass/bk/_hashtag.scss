@@ -1,0 +1,124 @@
+.hashtag-page_wrapper{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    // margin-left: 200px;
+    position: relative;
+    .btn_back{
+        line-height: 0.5;
+        left: 3%;
+    }
+}
+.hashtag-subject{
+    .hashtag-name{
+        font-size: 86px;
+        letter-spacing: 4.3px;
+        line-height: 0.5;
+        margin-bottom: 45px;
+        padding-left: 11vw;
+    }
+}
+.hashtag-mesonry{
+    left: 5.5vw;
+    // padding-left: 28px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hashtag-item{
+    float: left;
+    width: 28.5%;
+    -webkit-column-break-inside: avoid;
+    border: 1px solid #DCDEDF;
+
+}
+.hashtag-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    img{
+        max-width: 100%;
+        opacity: 0;
+    }
+}
+.hash-des{
+    padding: 30px;
+    .hash-tags{
+        font-size: 16px;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+        color: #A9A8A9;
+    }
+    .hash-title{
+        font-size: 40px;
+        letter-spacing: 1px;
+        line-height: 43px;
+        color: #000;
+    }
+    .hash-content{
+        font-size: 22px;
+        letter-spacing: 1.1px;
+        line-height: 20px;
+        color: #77777A;
+    }
+}
+@include moblie{
+    // moblie-width: 767px;
+    .hashtag-mesonry{
+        left: 0;
+    }
+    .hashtag-item{
+        width: 90%;
+    }
+    .hashtag-page_wrapper .btn_back{
+        padding-left: 5vw;
+        margin-bottom: 25px;
+    }
+    .hashtag-subject .hashtag-name{
+        padding-left: 5vw !important;
+        font-size: 50px;
+        margin-bottom: 25px;
+    }
+}
+@include tablet{
+    // tablet-width: 768px; - tablet-width-landscape: 992px;
+    .hashtag-item{
+        width: 43.5%;
+    }
+    .hashtag-page_wrapper .btn_back{
+        padding-left: 10.5vw;
+        margin-bottom: 25px;
+    }
+    .hashtag-subject .hashtag-name{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+    .hashtag-page_wrapper{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+@include laptop{
+    // tablet-width-landscape: 992px; - laptop-width: 1024px;  
+    .hashtag-item{
+        width: 43.5%;
+    }
+    .hashtag-page_wrapper .btn_back{
+        padding-left: 10.5vw;
+        margin-bottom: 25px;
+    }
+    .hashtag-page_wrapper{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .hashtag-subject .hashtag-name{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+
+}
+@include notebook{
+    // notebook-width: 1440px;
+    .hashtag-subject .hashtag-name{
+        padding-left: 10.5vw;
+    }
+    
+}

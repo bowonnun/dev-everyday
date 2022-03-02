@@ -1,0 +1,543 @@
+.pd-detail-page {
+  .pd-detail-page-wrapper {
+    position: relative;
+    display: flex;
+  }
+
+  .pd-detail-page-wrapper_active {
+    filter: blur(2px);
+  }
+
+  .pd-detail_left {
+    width: 45%;
+    background-color: rgba(183, 183, 183, 0.27);
+  }
+
+  .pd-detail_left-wrapper {
+    // height: calc(100vh - 60px);
+    position: sticky;
+    top: 60px;
+    margin-top: -20px;
+  }
+
+  .pdd-img {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  // ---------------pd-detail_right---------------------
+  .pd-detail_right {
+    width: 55%;
+  }
+
+  .pd-detail_right-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+
+    &:nth-child(1) {
+      height: calc(100vh - 60px);
+    }
+  }
+
+  .pd-detail_right-content {
+    h1 {
+      line-height: 1;
+      font-size: 45px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 24px;
+      padding: 5px 0 20px 0;
+    }
+  }
+  .pd-detail_group-cat {
+    display: flex;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    grid-row-gap: 15px;
+    .pd-detail_right-cat {
+      font-size: 16px;
+    }
+    .slashItem {
+      font-size: 16px;
+      margin: 0 7px;
+      cursor: default;
+    }
+  }
+
+  .btn-select-scents {
+    button {
+      cursor: pointer;
+      font-size: 25px;
+      padding: 10px 20px;
+      margin: 10px 0;
+      line-height: 0.9;
+      border: none;
+      background-color: #333333;
+      transition: 0.3s;
+      outline: none;
+      color: #fff;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+
+  // -----------------START-component-scents-------------
+  .component-scents {
+    .select-scents {
+      width: 300px;
+      height: 70px;
+      border: 1px solid #000;
+      position: relative;
+      margin: 0px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: "Select Scents";
+        color: #fff;
+        font-size: 30px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 0;
+        transition: 0.5s;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    .img-secent {
+      height: 100%;
+      width: 80px;
+
+      .img-secent_inner {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .name-secent {
+      padding-left: 15px;
+
+      p {
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+    .product-price {
+      margin: 5px 0 0 0;
+      font-size: 22px;
+      line-height: 1.3;
+
+      .dc-price {
+        font-size: 22px;
+        color: #757575;
+        font-weight: 100;
+        text-decoration: line-through;
+      }
+
+      span {
+        font-size: 30px;
+        font-weight: 700;
+        margin-left: 10px;
+      }
+    }
+
+    .form {
+      position: relative;
+      width: fit-content;
+      .form-groups {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: 35px;
+        label {
+          font-size: 20px;
+          padding-right: 10px;
+          margin-bottom: 0;
+        }
+
+        input {
+          text-align: center;
+          width: 60px;
+          font-size: 20px;
+          height: 100%;
+        }
+      }
+    }
+
+    .btn-add_to_cart {
+      font-size: 24px;
+      width: 160px;
+      height: 50px;
+      line-height: 0.9;
+      border: none;
+      background-color: #333333;
+      transition: 0.3s;
+      outline: none;
+      color: #fff;
+      margin-top: 25px;
+      cursor: pointer;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+
+  // -----------------END-component-scents-------------
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+
+  .sec-scents {
+    padding: 70px 0px 50px 30px;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 1000px;
+    background-color: #fff;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: auto;
+    box-shadow: -21px 0px 22px 0px rgba(117, 117, 117, 0.3);
+    z-index: 5;
+    transform: translateX(110%);
+    transition: 0.3s;
+
+    .icon-closer_wrapper {
+      width: 100%;
+      padding-bottom: 20px;
+      padding-top: 30px;
+      i {
+        cursor: pointer;
+        font-size: 25px;
+        color: #000;
+        font-weight: 700;
+      }
+    }
+
+    .sec-scents_wrpper {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .scents-item {
+      margin-right: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 220px;
+
+      &:hover {
+        -webkit-box-shadow: 2px 0px 11px 0px #c7c7c7;
+        -moz-box-shadow: 2px 0px 11px 0px #c7c7c7;
+        box-shadow: 2px 0px 11px 0px #c7c7c7;
+      }
+    }
+    .scents-item_SoldOut {
+      position: relative;
+      pointer-events: none;
+      &::before {
+        content: "Sold Out";
+        font-size: 30px;
+        color: #000;
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .scents-img_inner {
+        display: grid;
+        place-content: center;
+        opacity: 0.4;
+        pointer-events: none;
+      }
+      .scents-detail {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+    }
+
+    .scents-img {
+      width: 100%;
+      height: 220px;
+
+      .scents-img_inner {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .scents-detail {
+      padding: 15px;
+
+      .scentsitem-name {
+        font-size: 22px;
+        font-weight: 700;
+        
+      }
+      small{
+        font-size: 18px;
+        line-height: 0.8;
+      }
+
+      .scentsitem-price {
+        // color: #000;
+        font-size: 22px;
+
+        span {
+          color: #757575;
+          margin-right: 10px;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+
+  .sec-scents_active {
+    transform: translateX(0%);
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+}
+.dark-mode {
+  .pd-detail-page .pd-detail_group-cat .pd-detail_right-cat {
+
+    color: #fff;
+    &:hover {
+      color: #c5c5c5;
+    }
+  }
+  .pd-detail-page .component-scents .btn-add_to_cart,
+  .pd-detail-page .btn-select-scents button {
+    &:hover {
+      background-color: #d2d2d2;
+      color: #000;
+    }
+  }
+  .pd-detail-page .component-scents .select-scents::before {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .pd-detail-page .sec-scents .scents-item_SoldOut::before {
+    color: #fff;
+    z-index: 99;
+  }
+}
+
+@include laptop {
+  .pd-detail-page .sec-scents .icon-closer_wrapper {
+    padding-top: 15px;
+  }
+}
+
+@include tablet {
+  .pd-detail-page .sec-scents .icon-closer_wrapper {
+    padding-top: 15px;
+  }
+
+  .pd-detail-page .sec-scents .scents-item {
+    width: 175px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .pd-detail-page .sec-scents .scents-detail .scentsitem-name {
+    font-size: 20px;
+  }
+
+  .pd-detail-page .sec-scents .scents-detail .scentsitem-price {
+    font-size: 20px;
+  }
+
+  .pd-detail-page .sec-scents .scents-img {
+    height: 175px;
+  }
+
+  .pd-detail-page .pd-detail-page-wrapper {
+    flex-direction: column;
+  }
+
+  .pd-detail-page .pd-detail_left {
+    width: 100%;
+  }
+
+  .pd-detail-page .pd-detail_right {
+    width: 100%;
+  }
+
+  .pd-detail-page .pdd-img {
+    height: 60vw;
+    background-size: contain;
+  }
+
+  .pd-detail-page .pd-detail_right-item {
+    padding: 5% 10%;
+  }
+
+  .pd-detail-page .pd-detail_right-item:nth-child(1) {
+    height: unset;
+  }
+}
+
+@include moblie {
+  .pd-detail-page .sec-scents .icon-closer_wrapper {
+    padding-top: 15px;
+  }
+  .pd-detail-page .sec-scents .scents-detail .scentsitem-price span {
+    display: block;
+  }
+  .pd-detail-page .sec-scents .scents-detail .scentsitem-name {
+    font-size: 20px;
+  }
+
+  .pd-detail-page .sec-scents .scents-detail .scentsitem-price {
+    font-size: 20px;
+  }
+
+  .pd-detail-page .pd-detail-page-wrapper {
+    flex-direction: column;
+  }
+
+  .pd-detail-page .pd-detail_left {
+    width: 100%;
+  }
+
+  .pd-detail-page .pd-detail_right {
+    width: 100%;
+  }
+
+  .pd-detail-page .pdd-img {
+    height: 100vw;
+    background-size: contain;
+  }
+  .pd-detail-page .owl-dots {
+    bottom: 5px;
+  }
+
+  .pd-detail-page .pd-detail_right-item {
+    padding: 5%;
+  }
+
+  .pd-detail-page .pd-detail_right-item:nth-child(1) {
+    height: unset;
+    padding-bottom: 100px;
+  }
+
+  .pd-detail-page .pd-detail_right-content h1 {
+    font-size: 35px;
+  }
+
+  .pd-detail-page .pd-detail_right-content h3 {
+    font-size: 25px;
+  }
+
+  .pd-detail-page .pd-detail_right-content p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .pd-detail-page .sec-scents {
+    width: 760px;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  .pd-detail-page .sec-scents {
+    width: 515px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .pd-detail-page .pd-detail_left-wrapper {
+    margin-top: -5px;
+  }
+  .pd-detail-page .sec-scents {
+    width: 600px;
+  }
+}
+@media (max-width: 767px) {
+  .pd-detail-page .sec-scents {
+    width: 100%;
+    padding: 70px 0px 50px 15px;
+  }
+  .pd-detail-page .sec-scents .scents-item {
+    display: flex;
+    width: 100%;
+    border: 1px solid #000;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .pd-detail-page .sec-scents .scents-img {
+    width: 100px;
+    height: 100px;
+    height: 125px;
+    flex: 0.8;
+  }
+  .pd-detail-page .sec-scents .scents-detail {
+      padding: 15px;
+      flex: 1;
+  }
+  .pd-detail-page .component-scents form {
+    height: 45px;
+  }
+}
+
+// ---------------------dark-mode--------------------
+
+.dark-mode .pd-detail-page {
+  .pd-detail_left {
+    background-color: #0e0e0e;
+  }
+  .sec-scents {
+    background-color: #000;
+  }
+  .component-scents .select-scents {
+    border: 1px solid #fff;
+  }
+  .component-scents .name-secent p {
+    color: #fff;
+  }
+  .pd-detail_right-content p {
+    color: #b9b9b9;
+  }
+  .sec-scents .icon-closer_wrapper i {
+    color: #fff;
+  }
+}

@@ -1,0 +1,71 @@
+.banner_container {
+    .banner_wraper {
+        position: relative;
+        padding-top: 80px;
+        transition: 0.3s;
+
+        .banner {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+.banner_wraper .logo_cicle .logo_circle_item {
+    position: absolute;
+    right: 2.5%;
+    top: 15%;
+    width: 190px;
+    max-width: 100%;
+    z-index: 2;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+.slide_banner.owl-carousel .owl_item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .banner_wraper {
+        padding-top: 60px !important;
+        min-height: 600px !important;
+    }
+
+    .banner {
+        height: 600px !important;
+    }
+    .banner_wraper .logo_cicle .logo_circle_item {
+        width: 130px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .slide_banner.owl_carousel .owl_item img {
+        object-fit: cover;
+        object-position: 25% 0;
+    }
+    .banner_wraper {
+        padding-top: 60px !important;
+        min-height: 600px !important;
+    }
+
+    .banner {
+        height: 600px !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    // moblie-width: 767px;
+    .banner_wraper {
+        padding-top: 60px !important;
+        min-height: 250px !important;
+    }
+    .banner {
+        height: auto !important;
+    }
+    .banner_wraper .logo_cicle .logo_circle_item {
+        width: 65px;
+        right: 4.5%;
+        top: 25%;
+      }
+}

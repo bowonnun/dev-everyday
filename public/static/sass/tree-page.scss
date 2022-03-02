@@ -1,0 +1,410 @@
+.tree-page {
+  .tree-nav_wrapper .tree-nav_item:nth-child(1) {
+    .tree-logo {
+      width: 120px;
+      img {
+      }
+      position: absolute;
+      left: -9.5vw;
+    }
+  }
+  .circle-Type_cology {
+    max-width: 12px;
+    max-height: 12px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #800008;
+  }
+
+  .circle-Type_therapy {
+    max-width: 20px;
+    max-height: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #000000;
+  }
+
+  .circle-Type_heritage {
+    max-width: 20px;
+    max-height: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #b9a97e;
+  }
+
+  .tree-circle-Type {
+    width: 12px;
+    height: 12px;
+  }
+
+  .tree-nav_wrapper {
+    display: flex;
+    padding: 50px 0;
+    // padding-top: 40px;
+    margin-left: 60px;
+    margin-left: 13vw;
+    position: relative;
+  }
+  .tree-nav-btnback_active ~ .tree-nav_wrapper {
+    margin-left: 13vw;
+  }
+  .tree-nav_item {
+    width: 25%;
+    margin-right: 60px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 20px;
+    cursor: pointer;
+
+    .tree-logo {
+      width: 80px;
+
+      img {
+        max-width: 100%;
+        filter: brightness(1.3);
+        mix-blend-mode: difference;
+        filter: invert(1);
+      }
+    }
+    * .tree-content {
+      .title {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+
+        h2 {
+          white-space: nowrap;
+          font-size: 48px;
+        }
+
+        .tree-circle-Type {
+          margin-left: 10px;
+        }
+      }
+
+      .sub-title {
+        padding-right: 20px;
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .nav_item-none {
+    display: none;
+  }
+  .nav_item-acitve {
+    .tree-logo {
+      width: 8%;
+      position: absolute;
+      left: -9vw;
+    }
+    display: block;
+  }
+
+  .tree-nav-btnback {
+    padding: 20px;
+    margin-left: 60px;
+    // display: flex;
+    font-size: 20px;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+    i {
+      margin-right: 5px;
+    }
+  }
+  .tree-nav-btnback_active {
+    display: flex;
+  }
+  .tree-p-category_wrapper {
+    padding: 50px 0;
+    position: relative;
+    border-top: 1px solid #000;
+    margin-left: 13vw;
+    padding-right: 4.7vw;
+    .tree-p-cat-name {
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    .tree-p-type {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 35px;
+
+      .type_name {
+        text-align: center;
+        min-width: 17%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        h5 {
+          font-size: 28px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .tree-p-group {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-right: 100px;
+
+        .tree-p_item {
+          width: 25%;
+          // width: 335.953px;
+          text-align: center;
+          // padding: 0 30px;
+
+          .tree-p_img {
+            height: 250px;
+            position: relative;
+
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              object-fit: contain;
+              object-position: center;
+            }
+          }
+
+          .tree-p_des {
+            width: 60%;
+            margin: 15px auto;
+
+            p {
+              font-size: 20px;
+            }
+          }
+
+          .tree-circle-Type {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  .tree-page .tree-nav_item {
+    margin-right: 2.5vw;
+  }
+
+  .tree-page .tree-nav_item .tree-content .title h2 {
+    font-size: 2.35vw;
+  }
+
+  .tree-page .tree-nav_item .tree-content .sub-title p {
+    font-size: 1.1vw;
+  }
+
+  .tree-page
+    .tree-p-category_wrapper
+    .tree-p-type
+    .tree-p-group
+    .tree-p_item
+    .tree-p_img {
+    height: 13vw;
+  }
+
+  .tree-page .tree-p-category_wrapper .tree-p-cat-name h1 {
+    font-size: 2.65vw;
+  }
+
+  .tree-page .tree-p-category_wrapper .tree-p-type .type_name {
+    height: 13vw;
+    width: 7.7vw;
+  }
+
+  .tree-page .tree-p-category_wrapper .tree-p-type .type_name h5 {
+    font-size: 1.75vw;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .tree-page .tree-p-category_wrapper .tree-p-type .tree-p-group .tree-p_item {
+    width: 33.33%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .tree-page
+    .tree-p-category_wrapper
+    .tree-p-type
+    .tree-p-group
+    .tree-p_item
+    .tree-p_img {
+    height: 17vw;
+  }
+  .tree-page .tree-nav_wrapper {
+    flex-direction: column;
+    margin-right: 60px;
+  }
+
+  .tree-page .tree-nav_item {
+    width: 100%;
+    max-width: 275px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .tree-page .tree-p-category_wrapper {
+    margin-right: 60px;
+  }
+  .tree-page .tree-p-category_wrapper .tree-p-type .type_name {
+    height: auto;
+    width: 100%;
+  }
+  .tree-page .tree-p-category_wrapper .tree-p-type {
+    flex-direction: column;
+  }
+
+  .tree-page .tree-p-category_wrapper .tree-p-type .tree-p-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  .tree-page .tree-nav_item .tree-logo {
+    width: 90px;
+  }
+
+  .tree-page .tree-nav_item .tree-content .title h2 {
+    font-size: 35px;
+  }
+
+  .tree-page .tree-nav_item .tree-content .sub-title p {
+    font-size: 18px;
+  }
+
+  .tree-page .tree-p-category_wrapper .tree-p-cat-name h1 {
+    font-size: 40px;
+  }
+
+  .tree-page .tree-p-category_wrapper .tree-p-type .type_name h5 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .tree-page
+    .tree-p-category_wrapper
+    .tree-p-type
+    .tree-p-group
+    .tree-p_item
+    .tree-p_img {
+    height: 20vw;
+  }
+
+  .tree-page .tree-p-category_wrapper .tree-p-type .tree-p-group .tree-p_item {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  .tree-page .tree-p-category_wrapper .tree-p-cat-name h1 {
+    text-align: center;
+  }
+  .tree-page .tree-p-category_wrapper .tree-p-type .type_name {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .tree-page
+    .tree-p-category_wrapper
+    .tree-p-type
+    .tree-p-group
+    .tree-p_item
+    .tree-p_img {
+    height: 24vw;
+  }
+  .tree-page .tree-nav_wrapper {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .tree-page .tree-p-category_wrapper {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 690px) {
+  .tree-page .tree-nav_wrapper .tree-nav_item:nth-child(1) .tree-logo {
+    width: 75px;
+    position: relative;
+    left: 0;
+  }
+
+  .tree-page .tree-nav-btnback_active ~ .tree-nav_wrapper {
+    margin-left: 7vw;
+  }
+  .tree-page .tree-nav_item {
+    max-width: unset;
+  }
+  .tree-page .tree-nav_item .tree-content .title h2 {
+    font-size: 30px;
+  }
+  .tree-page .tree-nav_item .tree-logo {
+    width: 75px;
+  }
+  .tree-page .nav_item-acitve .tree-logo {
+    width: 30%;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    margin-bottom: 30px;
+  }
+  .tree-page .nav_item-acitve .tree-content {
+    .title {
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+      letter-spacing: 1.2px;
+    }
+    text-align: center;
+  }
+  .tree-page .tree-nav_item .tree-content .sub-title p {
+    font-size: 16px;
+  }
+  .tree-page .tree-p-category_wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tree-page
+    .tree-p-category_wrapper
+    .tree-p-type
+    .tree-p-group
+    .tree-p_item
+    .tree-p_des
+    p {
+    font-size: 15px;
+  }
+  .tree-page .tree-p-category_wrapper .tree-p-cat-name h1 {
+    font-size: 30px;
+  }
+  .tree-page .tree-p-category_wrapper .tree-p-type .type_name h5 {
+    font-size: 20px;
+  }
+  .tree-page .tree-circle-Type {
+    width: 10px;
+    height: 10px;
+  }
+  .tree-page .tree-content {
+    max-width: unset !important;
+  }
+  .tree-page .tree-nav-btnback {
+    margin-left: 15px;
+  }
+}

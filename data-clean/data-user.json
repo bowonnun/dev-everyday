@@ -1,0 +1,26 @@
+{
+    "users":[
+        {
+            "MemberCardTypeCode": "SUBLIME",
+            "CardNumber": "KK1971S0000001",
+            "FirstName": "SOOKFEI",
+            "LastName": "PANG",
+            "BirthDay": 27332,
+            "Mobile": "85298857260",
+            "Email": "jeerawut.te@gmail.com",
+            "RegisteDate": 42139,
+            "ExpireDate": "ไม่มีวันหมดอายุ"
+        },
+        {
+            "MemberCardTypeCode": "SUBLIME",
+            "CardNumber": "KK1971S0000002",
+            "FirstName": "DAVIDJ",
+            "LastName": "COCE",
+            "BirthDay": 42139,
+            "Mobile": "0818918953",
+            "Email": "",
+            "RegisteDate": 42139,
+            "ExpireDate": "ไม่มีวันหมดอายุ"
+        }
+    ]
+}

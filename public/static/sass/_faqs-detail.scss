@@ -1,0 +1,219 @@
+.f-detail-page_wrapper{
+    margin-left: 200px;
+    margin-right: 132px;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .btn_back{
+        width: fit-content;
+        top: 50px;
+        left: -130px;
+        margin-bottom: 30px;
+        padding-left: 0;
+        &:hover{
+            color: #800008;
+            // color: #C8B98F !important;
+        }
+    }
+}
+.f-detail-title{
+    font-family: "db_heaventreguler";
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.f-title_name{
+    word-break: break-word;
+    width: 80%;
+    font-size: 86px;
+    letter-spacing: 4.3px;
+    line-height: 1;
+    color: #000;
+}
+.f-detail-title .icon-close_wraper{
+    margin-top: 20px;
+    .icon-closer{
+        font-size: 28px;
+    }
+}
+.fd-block_wrapper{
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+.fd-card{
+    border-radius: 0;
+    border-bottom: none !important;
+    border: 1px solid rgba(0, 0, 0, 1);
+    &:last-child{
+        border-bottom: none !important;
+    }
+}
+.collapsed{
+    background-color: #fff !important;
+    .fd-btn-link_inner{
+        color: #000 !important;
+    }
+}
+.fdbtn-link{
+    background-color: #000;
+    white-space: unset;
+    text-decoration: none;
+    .fd-btn-link_inner{
+        font-family:"db_heaventreguler";
+        color: #fff;
+        letter-spacing: 1.2px;
+        line-height: 30px;
+        padding: 20px 0;
+        font-size: 24px;
+        width: 80%;
+        margin: 0 auto;
+    }
+    &:hover{
+        text-decoration: none;
+        background-color: #000 !important;
+        
+        .fd-btn-link_inner{
+            color: #fff !important;
+        }
+    }
+    &:focus{
+        text-decoration: none;
+        background-color: #000;
+    }
+}
+
+.fdcard-body{
+    font-family:"db_heaventreguler";
+    padding: 46px 10%;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+.f-detail-page .f-detail-page_wrapper{
+    .text-center{
+        font-family: "db_heaventreguler";
+        letter-spacing: 1.2px;
+        line-height: 30px;
+        padding: 20px;
+        font-size: 24px;
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid #000;
+        border-bottom: none;
+    }
+}
+.dark-mode .f-detail-page .f-detail-page_wrapper{
+    .text-center{
+        color: #fff;
+        border: 1px solid #fff;
+        border-bottom: none;
+    }
+}
+
+@include moblie{
+    // moblie-width: 767px;
+    .fdcard-body{
+        padding: 25px 5%;
+    }
+    .f-detail-page_wrapper{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .f-title_name{
+        font-size: 36px;
+        letter-spacing: 1.8px;
+        line-height: 0.9;
+    }
+    .fdbtn-link .fd-btn-link_inner{
+        font-size: 18px;
+        line-height: 18px;
+        width: 90%;
+    }
+    .f-detail-title .icon-close_wraper{
+        .icon-closer{
+            font-size: 20px;
+        }
+    }
+    .fdcard-body{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .f-detail-title .icon-close_wraper {
+        margin-top: 0px;
+    }
+    // -----------------------
+    .f-detail-page .f-detail-page_wrapper{
+        .text-center{
+            font-size: 18px;
+        }
+    }
+    .f-detail-page_wrapper {
+        padding-top: 25px;
+    }
+    .f-detail-page_wrapper .btn_back {
+        margin-bottom: 15px;
+    }
+    .f-detail-title {
+        padding-bottom: 25px;
+    }
+
+}
+@include tablet{
+    // tablet-width: 768px; - tablet-width-landscape: 992px;
+    .f-detail-page_wrapper{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .f-title_name{
+        font-size: 60px;
+    }
+    .fdbtn-link .fd-btn-link_inner{
+        font-size: 20px;
+    }
+    .fdcard-body{
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .f-detail-title .icon-close_wraper {
+        margin-top: 10px;
+    }
+    .f-detail-page .f-detail-page_wrapper{
+        .text-center{
+            font-size: 20px;
+        }
+    }
+}
+@include laptop{
+    // tablet-width-landscape: 992px; - laptop-width: 1024px;  
+    .f-detail-page_wrapper{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .f-detail-title .icon-close_wraper{
+        margin-top: 10px;
+    }
+
+}
+@include notebook{
+    // notebook-width: 1440px;
+    
+}
+// --------------------------------
+.dark-mode{
+    .f-title_name{
+        color: #fff;
+    }
+    .btn_back{
+        &:hover{
+            color: #C8B98F !important;
+        }
+    }
+    .fdcard-body a:hover{
+        color: #fff;
+    }
+}
+@media (max-width: 1024px) and (min-width: 992px){
+    .f-title_name {
+        font-size: 60px;
+    }
+}

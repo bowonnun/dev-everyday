@@ -1,0 +1,12 @@
+{
+  coupon(id: "NR3Z4CEG", idType: CODE) {
+    code
+    amount
+    date
+    dateExpiry
+    maximumAmount
+    minimumAmount
+    usageCount
+    usageLimit
+  }
+}

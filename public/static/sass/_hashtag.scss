@@ -1,0 +1,201 @@
+.hashtag-page_wrapper {
+  padding-top: 43px;
+  padding-bottom: 60px;
+  // margin-left: 200px;
+  position: relative;
+
+  .btn_back {
+    position: absolute;
+    line-height: 0.5;
+    left: 3%;
+  }
+}
+
+.hashtag-subject {
+  .hashtag-name {
+    font-size: 86px;
+    // letter-spacing: 4.3px;
+    line-height: 0.9;
+    margin-bottom: 45px;
+    padding-left: 10.5vw;
+  }
+}
+
+.hashtag-mesonry {
+  column-width: 460px;
+  column-gap: 30px;
+  padding-left: 11vw;
+  padding-right: 4.7vw;
+}
+
+.hashtag-item {
+  float: left;
+  margin-bottom: 35px;
+  // outline: 1px solid #DCDEDF;
+  border: 1px solid #dcdedf;
+  width: 100%;
+  // display: inline-block;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.hashtag-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  img {
+    max-width: 100%;
+    opacity: 0;
+  }
+  .img_search{
+    opacity: 1;
+  }
+}
+
+.hash-des {
+  padding: 30px;
+
+  .all-tags {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hash-tags {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 20px;
+    color: #a9a8a9;
+
+    &:last-child:after {
+      display: none;
+    }
+
+    &:after {
+      content: ", ";
+    }
+  }
+
+  .hash-title {
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: 43px;
+    color: #000;
+  }
+
+  .hash-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 22px;
+    letter-spacing: 1.1px;
+    line-height: 20px;
+    color: #77777a;
+  }
+}
+
+.hashtag-page .hashtag-mesonry .cannotfinde {
+  width: 70vw;
+  font-size: 50px;
+  color: #77777a;
+}
+
+.dark-mode .hashtag-page .hashtag-mesonry .cannotfinde {
+  width: 70vw;
+  font-size: 50px;
+  color: #dfdfdf;
+}
+
+@include moblie {
+  // moblie-width: 767px;
+  .hashtag-mesonry {
+    padding-left: 4.7vw;
+  }
+
+  .hashtag-page_wrapper .btn_back {
+    padding-left: 5vw;
+    margin-bottom: 25px;
+    position: static;
+  }
+
+  .hashtag-subject .hashtag-name {
+    padding-left: 5vw !important;
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .hashtag-page .hashtag-mesonry .cannotfinde {
+    font-size: 25px;
+  }
+  .hashtag-page_wrapper{
+    padding-top: 25px;
+  }
+}
+
+@include tablet {
+  // tablet-width: 768px; - tablet-width-landscape: 992px;
+  .hashtag-page_wrapper .btn_back {
+    padding-left: 10.5vw;
+    margin-bottom: 25px;
+    position: static;
+  }
+
+  .hashtag-subject .hashtag-name {
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+
+  .hashtag-page_wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hashtag-mesonry {
+    column-width: 300px !important;
+  }
+
+  .hashtag-page .hashtag-mesonry .cannotfinde {
+    font-size: 40px;
+  }
+}
+
+@include laptop {
+  // tablet-width-landscape: 992px; - laptop-width: 1024px;
+  .hashtag-page_wrapper .btn_back {
+    position: static;
+    padding-left: 10.5vw;
+    margin-bottom: 25px;
+  }
+
+  .hashtag-page_wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hashtag-subject .hashtag-name {
+    font-size: 60px;
+    margin-bottom: 25px;
+  }
+
+  .hashtag-page .hashtag-mesonry .cannotfinde {
+    font-size: 40px;
+  }
+}
+
+@include notebook {
+  // notebook-width: 1440px;
+  .hashtag-mesonry {
+    column-width: 350px;
+  }
+}
+// -----------dark-mode-----------
+.dark-mode {
+  .hashtag-item {
+    border: 1px solid #262626;
+  }
+}

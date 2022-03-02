@@ -1,0 +1,68 @@
+.Linktreekmkm {
+    max-width: 500px;
+    margin: 0 auto;
+
+    .opening{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        display: grid;
+        place-content: center;
+        z-index: 2;
+        animation: Linktreekmkm_opening 3s  forwards;
+        @keyframes Linktreekmkm_opening {
+            60%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+    .wrapper {
+        width: 100%;
+    }
+    .bannerPage {
+        position: sticky;
+        margin-bottom: 30px;
+        top: 0;
+        .Banner {
+            width: 100%;
+        }
+        .logoKmKm {
+            position: absolute;
+            width: 126px;
+            left: 30px;
+            bottom: 40px;
+        }
+    }
+    .groupLink {
+        padding: 0 30px;
+        .Linktreekmkm-item {
+            display: grid;
+            width: 100%;
+            height: 60px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            place-content: center;
+            font-size: 24px;
+            color: #000;
+            box-shadow: 0px 2px 6px rgb(0, 0, 0, 16%);
+        }
+    }
+    .groupSocial {
+        display: flex;
+        grid-auto-columns: max-content;
+        justify-content: center;
+        gap: 34px;
+        padding: 40px 0;
+        .Social-item {
+            width: fit-content;
+        }
+    }
+}

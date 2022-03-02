@@ -1,0 +1,290 @@
+.faqs-page_wrapper {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.faqs-text-group {
+  font-family: "db_heaventmed-regular";
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 160px;
+}
+.faqs-title{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    .faqs-title_name{
+        width: 75%;
+        font-size: 86px;
+        letter-spacing: 4.3px;
+        line-height: 1;
+    }
+    .icon-close_wraper{
+        margin-top: 20px;
+    }
+    .icon-closer{
+        font-size: 24px;
+        font-weight: 700;
+        color: #000;
+    }
+}
+.faqs-des {
+  font-family: "db_heaventmed-regular";
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  line-height: 30px;
+  .link-contactus {
+    font-size: 30px;
+    color: #800008;
+    text-decoration: underline;
+
+  }
+}
+.faqs-row{
+    // padding-bottom: 30px;
+    &:nth-child(n+2){
+        .faqs-cat_item .faqs-box{
+            margin-top: -1px;
+        }
+    }
+    &:last-child{
+        padding-bottom: 30px;
+    }
+}
+.faqs-cat_item{
+    float: left;
+    width: 20%;
+    height: 100%;
+    position: relative;
+    &:hover{
+        .faqs-box{
+            background-color:unset;
+            .faqs-subject{
+                color: #fff;
+            }
+            .faqs-status{
+                color: #fff;
+            }
+            &::before{
+                opacity: 1;
+            }
+            &::after{
+                opacity: 1;
+            }
+        }
+        .faqs-list{
+            opacity: 1;
+            transform: translateY(0px);
+            padding-top: 5px;
+            padding-bottom: 20px;
+            .faqs-list_item{
+                height: 30px;
+            }
+        }
+    }
+    &:nth-child(1){
+        .faqs-box{
+            border-left:1px solid #000;
+        }     
+    }
+}
+.faqs-box{
+    border: 1px solid #000;
+    border-left: none;
+    height: 190px;
+    position: relative;
+    background-color: #fff;
+    @include  animation-delay(0.4);
+    z-index: 1;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0;
+        z-index: -1;
+        @include  animation-delay(0.4);
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/sass/images/faqs/final_hording_wisdom.png);
+        opacity: 0;
+        z-index: -1;
+        @include  animation-delay(0.4);
+    }
+}
+.faqs-subject{
+    font-family: "db_heaventmed-regular";
+    
+    color: #000;
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 8px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    @include  animation-delay(0.4);
+}
+.faqs-status{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1.1px;
+    line-height: 30px;
+    @include  animation-delay(0.4);
+}
+.faqs-list{
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-50px);
+    z-index: -2;
+    @include  animation-delay(0.5);
+    .faqs-list_item{
+        font-size: 22px;
+        letter-spacing: 1.1px;
+        line-height: 30px;
+        height: 0px;
+        
+        @include  animation-delay(0.4);
+    }
+}
+@include moblie{
+    // moblie-width: 767px;
+    .faqs-text-group{
+        padding-bottom: 60px !important;
+    }
+    .faqs-page_wrapper{
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .faqs-des{
+        font-size: 18px !important;
+        letter-spacing: 0.9px !important;
+        line-height: 18px !important;
+        br{
+            display: none;
+        }
+        .link-contactus{
+            font-size: 18px !important;
+        }
+    }
+    .faqs-cat_item{
+        width: 50%;
+        &:nth-child(odd){
+            .faqs-box{
+                border-left:1px solid #000;
+            }     
+        }
+        &:nth-child(n+3){
+            .faqs-box{
+                margin-top: -1px;
+            }     
+        }
+    }
+    .faqs-list{
+        display: none;
+    }
+    .faqs-box{
+        height: 150px !important;
+    }
+    .faqs-subject{
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .faqs-status{
+        font-size: 14px;
+    }
+    .faqs-title .faqs-title_name{
+        font-size: 36px;
+    }
+    
+}
+@include tablet{
+    // tablet-width: 768px; - tablet-width-landscape: 992px;
+    .faqs-list{
+        display: none;
+    }
+    .faqs-box{
+        height: 150px !important;
+    }
+
+    .faqs-subject{
+        font-size: 20px;
+    }
+    .faqs-status{
+        font-size: 18px;
+    }
+    .faqs-des{
+        font-size: 22px;
+        letter-spacing: 1px;
+        line-height: 19px;
+        br{
+            display: none;
+        }
+        .link-contactus{
+            font-size: 22px;
+            letter-spacing: 1px;
+            line-height: 19px;
+        }
+    }
+    .faqs-cat_item{
+        width: 33.33%;
+        &:nth-child(4n){
+            .faqs-box{
+                border-left:1px solid #000;
+            }     
+        }
+        &:nth-child(n+4){
+            .faqs-box{
+                margin-top: -1px;
+            }     
+        }
+    }
+    .faqs-title .faqs-title_name{
+        font-size: 50px;
+    }
+}
+@include laptop{
+    // tablet-width-landscape: 992px; - laptop-width: 1024px;
+
+    .faqs-des{
+        font-size: 24px;
+        line-height: 24px;
+        .link-contactus{
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+
+    .faqs-box{
+        height: 150px;
+    }
+    .faqs-subject{
+        font-size: 24px;
+    }
+    .faqs-status{
+        font-size: 16px;
+    }
+}
+@include notebook{
+    // notebook-width: 1440px;
+    .faqs-text-group{
+        padding-bottom: 100px;
+    }
+}
