@@ -432,6 +432,10 @@ h6,
 
   .detail-pd_cart {
     padding: 10px 15px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     h4 {
       font-size: 24px;
       color: #000;
@@ -441,6 +445,9 @@ h6,
     h5 {
       font-size: 22px;
       color: #000;
+    }
+    .price{
+      font-size: 28px;
     }
   }
 

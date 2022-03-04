@@ -144,7 +144,7 @@ class IconCart extends Component {
 
     }
     updateItemCart = async () => {
-        this.setState({ isLoading: true,toggleIcon : !this.state.toggleIcon })
+        this.setState({ isLoading: true, toggleIcon: !this.state.toggleIcon })
         let encode = localStorage.getItem('woo-next-cart');
         if (encode == null) {
             this.setState({ isLoading: false })
@@ -284,9 +284,15 @@ class IconCart extends Component {
                                                     <p className='qty'>x<span>{item.qty}</span></p>
                                                 </div>
                                                 <div className="detail-pd_cart">
-                                                    <h4>{this.splitScents(item.name, 0)}</h4>
-                                                    <h5>{this.splitScents(item.name, 1)}</h5>
-                                                    <h5>{item.price} THB</h5>
+                                                    <div className='detail-pd_cart_row'>
+                                                        <h4>{this.splitScents(item.name, 0)}</h4>
+                                                        <h5>{this.splitScents(item.name, 1)}</h5>
+                                                    </div>
+                                                    <div className='detail-pd_cart_row'>
+                                                        <h5 className='price'>฿{item.price}</h5>
+                                                    </div>
+
+
                                                 </div>
                                                 <div className="delete-pd_cart" onClick={() => this.removeToCart(item.productId, item.variationId)}> </div>
                                             </div>
