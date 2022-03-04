@@ -12,30 +12,6 @@ header {
   }
 }
 
-// Start validate css for custom.js
-.h-80px {
-  height: 80px !important;
-}
-
-.h-60px {
-  height: 60px !important;
-}
-
-.top-80px {
-  top: 80px !important;
-}
-
-.top-60px {
-  top: 60px !important;
-}
-
-.top-100px {
-  top: 100px !important;
-}
-
-.top-120px {
-  top: 120px !important;
-}
 
 // End validate css for custom.js
 
@@ -303,7 +279,6 @@ nav {
 
 // End search-result--------------------
 
-.btn-callCart,
 .btn-callAccount,
 .btn-callMore {
   @include remove-btn;
@@ -324,23 +299,27 @@ nav {
   color: #c8b98f !important;
 }
 .btn-callCart {
-  right: 90px;
-  .count-cart {
-    position: relative;
+  @include remove-btn;
+  position: relative;
+  margin-left: 20px;
+  i{
+    font-size: 24px;
   }
+
   span {
     font-family: "db_heaventreguler" !important;
     position: absolute;
-    top: -20px;
-    left: -10px;
+    top: -2px;
+    left: -8px;
     border-radius: 50px;
-    padding: 2px 4px 0;
-    background-color: #800008;
+    background-color: #162852;
     font-size: 14px;
     color: #fff;
     font-weight: 700;
     min-width: 18px;
     height: 18px;
+    display: grid;
+    place-content: center;
   }
 }
 .btn-callAccount {

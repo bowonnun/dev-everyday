@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Head from 'next/head'
 import { AppContext } from '../components/Context/AppContext'
-import { removeItemFromCart, priceCommas  } from '../services/function'
+import { removeItemFromCart, priceCommas } from '../services/function'
 import Base64 from '../components/Base64'
 import Link from 'next/link'
 import { getWoocomData } from "../services/WooService";
@@ -13,7 +13,8 @@ class IconCart extends Component {
         super(props)
         this.state = {
             isLoading: true,
-            productInCartManageStock: null
+            productInCartManageStock: null,
+            toggleIcon: false
         }
     }
     Spinner = () => {
@@ -50,15 +51,15 @@ class IconCart extends Component {
         </div>;
         return content
     }
-    splitScents = (text,index) => {
+    splitScents = (text, index) => {
         var res = text.split("-");
         return res[index]
     }
-    componentDidMount= async ()=>{
+    componentDidMount = async () => {
         let encode = localStorage.getItem('woo-next-cart');
         let existingCart = Base64.atob(encode);
-        if(encode == null){
-            this.setState({ isLoading: false})
+        if (encode == null) {
+            this.setState({ isLoading: false })
         }
         existingCart = existingCart != undefined ? JSON.parse(existingCart) : '';
         const products = (null !== existingCart && Object.keys(existingCart).length) ? existingCart.products : ''
@@ -140,13 +141,13 @@ class IconCart extends Component {
             }
         }
         this.setState({ isLoading: false, productInCartManageStock: productInCartManageStock })
-        
+
     }
-    updateItemCart = async () =>{
-        this.setState({ isLoading: true})
+    updateItemCart = async () => {
+        this.setState({ isLoading: true,toggleIcon : !this.state.toggleIcon })
         let encode = localStorage.getItem('woo-next-cart');
-        if(encode == null){
-            this.setState({ isLoading: false})
+        if (encode == null) {
+            this.setState({ isLoading: false })
             return false
         }
         let existingCart = Base64.atob(encode);
@@ -231,13 +232,13 @@ class IconCart extends Component {
         }
         this.setState({ isLoading: false, productInCartManageStock: productInCartManageStock })
     }
-    removeToCart = (productId,variationId) =>{
-        const [cart , setCart] = this.context
-        if(process.browser) {
-            const updateCart = removeItemFromCart(productId,variationId)
-            setCart( updateCart )
+    removeToCart = (productId, variationId) => {
+        const [cart, setCart] = this.context
+        if (process.browser) {
+            const updateCart = removeItemFromCart(productId, variationId)
+            setCart(updateCart)
         }
-        
+
     }
     CountProducts() {
         const [cart, setCart] = this.context
@@ -248,21 +249,30 @@ class IconCart extends Component {
 
         return (
             <>
-                <button className="btn-callCart icon-cart btnIcon-call_item" onClick={() => {this.updateItemCart()}}>
-                    <div className="count-cart">
-                        {!productCount ? <span>0</span> : productCount <= 99 ? <span>{productCount}</span> : <span>99+</span>}
-                    </div>
-                </button>
+                {this.state.toggleIcon == false ?
+                    <button className="btn-callCart btnIcon-call_item" onClick={() => { this.updateItemCart() }}>
+                        <i className='fal fa-shopping-bag' />
+                        <div className="count-cart">
+                            {!productCount ? <span>0</span> : productCount <= 9 ? <span>{productCount}</span> : <span>9+</span>}
+                        </div>
+                    </button>
+                    :
+                    <button className="btn-callCart btnIcon-call_item" onClick={() => { this.updateItemCart() }}>
+                        <i className='fal fa-times' />
+                    </button>
+                }
+
+
+
+
                 <div className='cart_overlay'></div>
                 <div className="cart-component">
                     <div className={"cart-detail_wrapper " + (isLoading ? 'isLoading' : '')}>
                         {isLoading ? this.Spinner() : ''}
                         <div className="cart-title">
-                            <h2>CART</h2>
-                            <div className="close-cart"><i className="icon-closer"></i></div>
-                            <p>Total : {productCount} Products</p>
+                            <p>Cart : <span>{productCount} item</span></p>
                         </div>
-                        
+
                         <div className="group-cart-item">
                             {
                                 products.length !== 0 ?
@@ -271,15 +281,14 @@ class IconCart extends Component {
                                             <div className="cart-item" key={i}>
                                                 <div className="img-pd_cart">
                                                     <div className="img-pd_cart-inner" style={{ backgroundImage: "url(" + item.image + ")" }} />
+                                                    <p className='qty'>x<span>{item.qty}</span></p>
                                                 </div>
                                                 <div className="detail-pd_cart">
-                                                    <h4>{this.splitScents(item.name,0)}</h4>
-                                                    <h5>{this.splitScents(item.name,1)}</h5>
-                                                    <h5>{item.qty} x {item.price} THB</h5>
+                                                    <h4>{this.splitScents(item.name, 0)}</h4>
+                                                    <h5>{this.splitScents(item.name, 1)}</h5>
+                                                    <h5>{item.price} THB</h5>
                                                 </div>
-                                                <div className="delete-pd_cart"  onClick={()=> this.removeToCart(item.productId,item.variationId)}>
-                                                    <i className="icon-trash-bin" aria-hidden="true"></i>
-                                                </div>
+                                                <div className="delete-pd_cart" onClick={() => this.removeToCart(item.productId, item.variationId)}> </div>
                                             </div>
                                         )
                                     })
@@ -298,7 +307,6 @@ class IconCart extends Component {
                                 <small>VAT included</small>
                             </div>
                             <div className="group-btn-cart">
-                                <Link href="/onlinestores"><button className="btn-shop-now">LET’S SHOP NOW</button></Link>
                                 <Link href="/cart"><button className="btn-check-out">CHECK OUT</button></Link>
                             </div>
                         </div>

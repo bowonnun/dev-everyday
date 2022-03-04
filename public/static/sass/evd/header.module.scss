@@ -1,0 +1,55 @@
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.3);
+    position: relative;
+    height: 80px;
+    .logo_header{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    }
+}
+.menu_icon {
+    cursor: pointer;
+    display: inline-block;
+
+}
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+    transform: rotate(-45deg) translate(-7px, 5px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -5px);
+    transform: rotate(45deg) translate(-7px, -5px);
+}
+.group_icon{
+    display: flex;
+    .icon_item{
+        font-size: 24px;
+        color: #000;
+    }
+}
+
+
+
+
+

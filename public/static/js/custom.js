@@ -122,39 +122,6 @@ jQuery(document).ready(function() {
 
     });
 
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-
-        if (scroll < 100) {
-
-            $(".menu-item ").removeClass('h-60px');
-            $(".bg-space ").removeClass('h-60px');
-            $(".icon-search").removeClass('h-60px');
-
-            $(".search").removeClass('top-60px');
-            $(".icon-close").removeClass('top-80px');
-            $(".group-icon").removeClass('h-60px');
-
-            $(".logo-small").removeClass('slideUp');
-            $(".editorial_left").removeClass('images-left-box');
-
-            $(".search-result").removeClass('top-120px');
-        } else {
-            $(".menu-item ").addClass('h-60px');
-            $(".bg-space ").addClass('h-60px');
-            $(".icon-search").addClass('h-60px');
-
-            $(".search").addClass('top-60px');
-            $(".icon-close").addClass('top-80px');
-            $(".group-icon").addClass('h-60px');
-            
-            $(".logo-small").addClass('slideUp');
-            $(".editorial_left").addClass('images-left-box');
-            
-            $(".search-result").addClass('top-120px');
-
-        }
-    });
 });
 
 jQuery(document).ready(function($) {
